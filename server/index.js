@@ -26,7 +26,7 @@ app.post('/upload', upload.single('file'), async (req, res) => {
       text = fs.readFileSync(filePath, 'utf8');
     }
 
-    const response = await axios.post('http://localhost:8000/analyze', {
+    const response = await axios.post('http://10.0.0.4:8000/analyze', {
       content: text
     });
 

@@ -20,7 +20,7 @@ function App() {
     setResult(null);
 
     try {
-      const response = await axios.post('/api/node', formData);
+      const response = await axios.post('/api/node/', formData);
       setResult(response.data);
     } catch (err) {
       alert("Failed to analyze file.");

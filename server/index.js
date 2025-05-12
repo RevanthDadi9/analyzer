@@ -9,10 +9,10 @@ const app = express();
 const upload = multer({ dest: 'uploads/' });
 app.use(cors());
 app.use(express.json());
-app.get('/', function (req, res) {
+app.get('/upload', function (req, res) {
   res.send('Apple API! v0.5');
 });
-app.post('/upload', upload.single('file'), async (req, res) => {
+app.post('/', upload.single('file'), async (req, res) => {
   const filePath = req.file.path;
   const fileMime = req.file.mimetype;
 

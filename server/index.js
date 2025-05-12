@@ -39,6 +39,6 @@ app.post('/upload', upload.single('file'), async (req, res) => {
   }
 });
 
-app.listen(5013, '0.0.0.0' () => {
+app.listen(5013, '0.0.0.0', () => {
   console.log('Backend listening on port 5013');
 });
